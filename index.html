@@ -453,7 +453,7 @@
      API
   ──────────────────────────────────────────────── */
   async function fetchData() {
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/블로그 체험단 엑셀 관리 팁?key=${API_KEY}`;
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${SPREADSHEET_ID}/values/블로그 체험단 엑셀 관리 팁?key=${API_KEY}&t=${Date.now()}`;
     console.log('[API 요청 URL]', url);
     const res = await fetch(url);
     if (!res.ok) throw new Error(`HTTP ${res.status} — ${res.statusText}`);
